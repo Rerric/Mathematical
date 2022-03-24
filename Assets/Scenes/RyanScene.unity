@@ -409,7 +409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347289203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1447629529}
@@ -497,7 +497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375447398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.1, z: -18.8}
+  m_LocalPosition: {x: 0, y: 3, z: -18.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -515,6 +515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b306bbdc4b818439d994ab2ca0727a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCamera: {fileID: 1375447400}
+  zoomSpeed: 40
+  maxFOV: 60
+  minFOV: 10
 --- !u!1001 &1447629528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -528,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2e30fcd0fe9aaf45b500b68db9a995a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0038209
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2e30fcd0fe9aaf45b500b68db9a995a, type: 3}
       propertyPath: m_LocalPosition.y
