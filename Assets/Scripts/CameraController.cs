@@ -20,22 +20,34 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            myCamera.fieldOfView -= zoomSpeed * Time.deltaTime;
-            if (myCamera.fieldOfView < minFOV)
-            {
-                myCamera.fieldOfView = minFOV;
-            }
+            StartCoroutine(ZoomIn());
         }
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
+        {
+            StartCoroutine(ZoomOut());
+        }
+    }
+
+    public IEnumerator ZoomIn()
+    {
+        var stop = Time.deltaTime * 2.0f;
+        while (myCamera.fieldOfView > minFOV)
+        {
+            myCamera.fieldOfView -= zoomSpeed * Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    public IEnumerator ZoomOut()
+    {
+        var stop = Time.deltaTime * 2.0f;
+        while (myCamera.fieldOfView < maxFOV)
         {
             myCamera.fieldOfView += zoomSpeed * Time.deltaTime;
-            if (myCamera.fieldOfView > maxFOV)
-            {
-                myCamera.fieldOfView = maxFOV;
-            }
+            yield return null;
         }
     }
 }
