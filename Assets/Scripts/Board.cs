@@ -17,6 +17,8 @@ public class Board : MonoBehaviour
 
     public int Height => Tiles.GetLength(dimension: 1);
 
+    private readonly List<Tile> _selection = new List<Tile>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,14 @@ public class Board : MonoBehaviour
         {
             for (var x = 0; x < Width; x++)
             {
-                Tiles[x, y] = rows[y].tiles[x];
+                var tile = rows[y].tiles[x];
+
+                tile.x = x;
+                tile.y = y;
+
+                Tiles[x, y] = tile;
+
+                tile.Item = ItemData.Items[Random.Range(0, ItemData.Items.Length)];
             }
         }
     }
@@ -35,5 +44,10 @@ public class Board : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Select(Tile tile)
+    {
+
     }
 }
