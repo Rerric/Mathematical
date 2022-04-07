@@ -48,6 +48,12 @@ public class Board : MonoBehaviour
 
     public void Select(Tile tile)
     {
+        if (!_selection.Contains(tile)) _selection.Add(tile);
 
+        if (_selection.Count < 2) return;
+
+        Debug.Log("selected 2 tiles!");
+
+        _selection.Clear();
     }
 }
