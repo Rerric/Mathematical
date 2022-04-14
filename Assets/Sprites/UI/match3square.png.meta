@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: e750b8204462f6f41bd34a9201293245
+guid: 7234d8c7fd32cf943b2cc5368d3f3bd1
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -9061897838036014672
-    second: Mathematical_char_idle_spsheet_0
-  - first:
-      213: -3096222425895818895
-    second: Mathematical_char_idle_spsheet_1
-  - first:
-      213: -612806575507942971
-    second: Mathematical_char_idle_spsheet_2
-  - first:
-      213: 1934258466998620925
-    second: Mathematical_char_idle_spsheet_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,12 +41,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,95 +101,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Mathematical_char_idle_spsheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1490
-        height: 2137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b9abf4adebad3280800000000000000
-      internalID: -9061897838036014672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mathematical_char_idle_spsheet_1
-      rect:
-        serializedVersion: 2
-        x: 1490
-        y: 0
-        width: 1490
-        height: 2137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 179a1eeab120805d0800000000000000
-      internalID: -3096222425895818895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mathematical_char_idle_spsheet_2
-      rect:
-        serializedVersion: 2
-        x: 2980
-        y: 0
-        width: 1490
-        height: 2137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c153d69aafde77f0800000000000000
-      internalID: -612806575507942971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mathematical_char_idle_spsheet_3
-      rect:
-        serializedVersion: 2
-        x: 4470
-        y: 0
-        width: 1490
-        height: 2137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df29e3dd3ddd7da10800000000000000
-      internalID: 1934258466998620925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ef3208d2c04d1da42b2135d3d2e06f0f
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
