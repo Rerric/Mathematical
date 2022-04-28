@@ -1,6 +1,6 @@
 # This file uses meters as units for non-parametric coordinates.
 
-mtllib chipbagnormal.mtl
+mtllib chipbagnormalUV.mtl
 g default
 v -0.800000 2.600000 -9.300000
 v 0.600000 2.600000 -9.300000

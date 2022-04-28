@@ -1,6 +1,6 @@
 # This file uses meters as units for non-parametric coordinates.
 
-mtllib chipscrushed.mtl
+mtllib chipscrushedUV.mtl
 g default
 v -4.452495 2.399714 -9.112584
 v -3.601225 2.597916 -9.298961
