@@ -1,6 +1,6 @@
 # This file uses meters as units for non-parametric coordinates.
 
-mtllib papercrushedball.mtl
+mtllib papercrushedballUV.mtl
 g default
 v 0.265876 -0.888401 -11.430303
 v 0.830298 -0.773963 -11.128531
