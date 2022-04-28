@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2786732193785381599}
+  - component: {fileID: -4650550302179573188}
   m_Layer: 0
   m_Name: paper
-  m_TagString: Untagged
+  m_TagString: trash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,6 +32,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &-4650550302179573188
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3307795549071693925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.2751188
+  m_Height: 3.9398131
+  m_Direction: 1
+  m_Center: {x: -0.08502054, y: -0.07114816, z: -12.408403}
 --- !u!1 &7077702254704938270
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,6 +57,7 @@ GameObject:
   - component: {fileID: 7376237775353122759}
   - component: {fileID: 5138176298825480410}
   - component: {fileID: 464096325923677893}
+  - component: {fileID: 6968137449685637803}
   m_Layer: 0
   m_Name: pCube21
   m_TagString: Untagged
@@ -112,3 +128,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &6968137449685637803
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077702254704938270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.4865904
+  m_Height: 2.9731808
+  m_Direction: 1
+  m_Center: {x: -0.10299456, y: 0.15069318, z: -12.236353}
