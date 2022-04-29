@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Match3: MonoBehaviour
 {
-    /*public ArrayLayout boardLayout;
+    public ArrayLayout boardLayout;
     public Sprite[] pieces;
 
     int width = 6;
@@ -146,5 +146,5 @@ public class Node
         index = i;
     }
 
-*/
+
 }
