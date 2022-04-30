@@ -14,9 +14,9 @@ public class Trashspawner : MonoBehaviour
     void Start()
     {
 
-        AddictScript = GameObject.Find(“Addictcheck”).GetComponent<Addictionlevel>();
+        AddictScript = GameObject.Find("Adictcheck").GetComponent<Addictionlevel>();
 
-       if (LevelComplete==true)
+       //if (LevelComplete==true)
         {
           
             Invoke("SpawnTrash", 2);
@@ -26,14 +26,14 @@ public class Trashspawner : MonoBehaviour
     // Update is called once per frame
    void SpawnTrash()
     {
-        int index = Random.Range(0, trashspawner.Length);
-        //refers to Addictionlevel code
+        
+        
         if (AddictScript.addiction < 0f)
         {
             //amount of messages ignored corresponds to amount of trash 'messy'
             while (AddictScript.messy <= 1)
             {
-               ;
+                int index = Random.Range(0, trashspawner.Length);
                 //chooses on which side of desk to spawn
                 ChooseSide = Random.Range(0, 2);
 

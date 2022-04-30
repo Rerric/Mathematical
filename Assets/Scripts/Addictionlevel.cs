@@ -9,17 +9,18 @@ public class Addictionlevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        addiction = 3.2f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //ignore message
-        addiction = +0.8f;
+            //ignore message
+       
+        //addiction = +0.8f;
 
-        //checks message
-        addiction = -0.6f;
+            //checks message
+       // addiction = -0.6f;
         
         //makes sure that addiction never goes below 0
         if(addiction>=0f)
@@ -27,8 +28,8 @@ public class Addictionlevel : MonoBehaviour
             addiction = 0f;
         }
 
-        //final convert into messy
-        if (LevelComplete == true)
+            //final convert into messy
+       // if (LevelComplete == true)
         {
             messy = (int)addiction;
 
