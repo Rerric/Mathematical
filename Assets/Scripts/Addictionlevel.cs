@@ -18,17 +18,23 @@ public class Addictionlevel : MonoBehaviour
         //ignore message
         addiction = +0.8f;
 
-        //adress message
+        //checks message
         addiction = -0.6f;
         
+        //makes sure that addiction never goes below 0
         if(addiction>=0f)
         {
             addiction = 0f;
         }
-        if (LevelComplete==true)
+
+        //final convert into messy
+        if (LevelComplete == true)
         {
-            messy= (int)addiction;
-           
+            messy = (int)addiction;
+
         }
     }
 }
+   
+
+
