@@ -8,46 +8,58 @@ public class Trashspawner : MonoBehaviour
 
     public int ChooseSide = 0;
     public Addictionlevel AddictScript;
-
     Vector3 spawnPos;
     // Start is called before the first frame update
     void Start()
     {
 
-        AddictScript = GameObject.Find("Adictcheck").GetComponent<Addictionlevel>();
+        AddictScript = GameObject.Find("Addictcheck").GetComponent<Addictionlevel>();
+
 
        //if (LevelComplete==true)
         {
           
-            Invoke("SpawnTrash", 2);
+            Invoke("SpawnTrash",2);
+
         }
     }
 
-    // Update is called once per frame
+    //spawns trash
    void SpawnTrash()
     {
+
         
-        
-        if (AddictScript.addiction < 0f)
+        if (AddictScript.addiction > 0)
         {
-            //amount of messages ignored corresponds to amount of trash 'messy'
-            while (AddictScript.messy <= 1)
+
+            
+            while (AddictScript.messy >= 1)
             {
                 int index = Random.Range(0, trashspawner.Length);
                 //chooses on which side of desk to spawn
-                ChooseSide = Random.Range(0, 2);
+              
 
-                if (ChooseSide != 0)
-                {
-                    Vector3 spawnPos = new Vector3(Random.Range(-15f, -5f), 2.5f, Random.Range(6f, 14f));
-                }
-                else
-                {
-                    Vector3 spawnPos = new Vector3(Random.Range(7f, 13f), 2.5f, Random.Range(6f, 14f));
-                }
+                Invoke("SpawnSides", 2);
+               
                 Instantiate(trashspawner[index], spawnPos, trashspawner[index].transform.rotation);
-                AddictScript.messy = -1;
+                AddictScript.messy -= 1;
+                Debug.Log("trashWorking");
             }
+        }
+    }
+    //Chooses which side of desk to spawn trash
+    void SpawnSides()
+    {
+        ChooseSide = Random.Range(0, 2);
+        if (ChooseSide >= 1)
+        {
+            Vector3 spawnPos = new Vector3(Random.Range(-15, -5), 2.5f, Random.Range(6, 14));
+            Debug.Log("check");
+        }
+        if(ChooseSide==0)
+        {
+            Vector3 spawnPos = new Vector3(Random.Range(7, 13), 2.5f, Random.Range(6, 14));
+            Debug.Log("other");
         }
     }
 }

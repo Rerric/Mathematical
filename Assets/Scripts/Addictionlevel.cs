@@ -10,20 +10,25 @@ public class Addictionlevel : MonoBehaviour
     void Start()
     {
         addiction = 3.2f;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-            //ignore message
-       
-        //addiction = +0.8f;
-
-            //checks message
-       // addiction = -0.6f;
-        
+      //ignore message
+       /*if ( )
+        {
+            addiction += 0.8f;
+        }
+      //checks message
+        if ( )
+        {
+             addiction += 0.6f;
+        }
+       */
         //makes sure that addiction never goes below 0
-        if(addiction>=0f)
+        if(addiction<=0)
         {
             addiction = 0f;
         }
