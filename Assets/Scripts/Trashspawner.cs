@@ -45,18 +45,18 @@ public class Trashspawner : MonoBehaviour
                 if (ChooseSide > 0)
                 {
                     spawnPos = new Vector3(Random.Range(-14, -1), 2.5f,5);
-                    Debug.Log("leftchosen");
+                    
                 }
                 //Rightside
                 else
                 {
                      spawnPos = new Vector3(Random.Range(7, 11), 2.5f, 5);
-                    Debug.Log("rightchosen");
+                    
                 }
                 //spawns in a piece of trash
                 Instantiate(trashspawner[index], spawnPos, trashspawner[index].transform.rotation);
                 AddictScript.messy -= 1;
-                Debug.Log("trashWorking");
+                
             }
         }
     }

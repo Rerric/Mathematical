@@ -42,11 +42,13 @@ public class Trashpickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //make it so object is unable to go through table or front and back border
+        //lock z cordinate
+        //fix cursortracking
+        //something with Physics.Raycast Input.mousePosition Camera.ScreenToWorldPoint Camera.ScreenPointToRay
         if (dragging)
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-            //  and z position and keep mouse pointer on object
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
             transform.position = rayPoint + startDist;
