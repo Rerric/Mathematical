@@ -19,7 +19,7 @@ public class Trashspawner : MonoBehaviour
        //if (LevelComplete==true)
         {
           
-            Invoke("SpawnTrash",2);
+            Invoke("SpawnTrash",1);
 
         }
     }
