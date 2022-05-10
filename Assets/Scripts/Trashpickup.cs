@@ -45,13 +45,13 @@ public class Trashpickup : MonoBehaviour
         //make it so object is unable to go through table or front and back border
         //lock z cordinate
         //fix cursortracking
-        //something with Physics.Raycast Input.mousePosition Camera.ScreenToWorldPoint Camera.ScreenPointToRay
+        //something with Physics.Raycast Input.mousePosition Camera.ScreenToWorldPoint Camera.ScreenPointToRay Rigidbody.move.position dynamic/speculative continuos
         if (dragging)
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
-            transform.position = rayPoint + startDist;
+            GetComponent<Rigidbody>().position = rayPoint + startDist;
             
             
         }

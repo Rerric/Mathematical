@@ -10,7 +10,7 @@ public class Addictionlevel : MonoBehaviour
     void Start()
     {
         addiction = 3.2f;
-
+        addiction = Random.Range(0, 5.2f);
     }
 
     // Update is called once per frame
