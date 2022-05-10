@@ -17,6 +17,8 @@ public class Match3: MonoBehaviour
     int height = 6;
     Node[,] board;
 
+    List<NodePiece> update;
+
     System.Random random;
 
     void Start()
@@ -24,10 +26,30 @@ public class Match3: MonoBehaviour
         StartGame();
     }
 
+    void Update()
+    {
+        List<NodePiece> finishedUpdating = new List<NodePiece>();
+        for (int i = 0; i < update.Count; i++)
+        {
+            NodePiece piece = update[i];
+            bool updating = piece.UpdatePiece();
+            if (!updating)
+            {
+                finishedUpdating.Add(piece);
+            }
+        }
+        for (int i = 0; i < finishedUpdating.Count; i++)
+        {
+            NodePiece piece = finishedUpdating[i];
+            update.Remove(piece);
+        }
+    }
+
     void StartGame()
     {
         string seed = GetRandomSeed();
         random = new System.Random(seed.GetHashCode());
+        update = new List<NodePiece>();
 
         InitializeBoard();
         VerifyBoard();
@@ -87,6 +109,12 @@ public class Match3: MonoBehaviour
                 node.Initialize(val, new Point(x, y), pieces[val - 1]);
             }
         }
+    }
+
+    public void ResetPiece(NodePiece piece)
+    {
+        piece.ResetPosition();
+        update.Add(piece);
     }
 
     List<Point> isConnected(Point p, bool main)
@@ -244,6 +272,10 @@ public class Match3: MonoBehaviour
         return seed;
     }
 
+    public Vector2 getPositionFromPoint(Point p)
+    {
+        return new Vector2(0.3f + (0.6f * p.x), -0.3f - (0.6f * p.y));
+    }
 }
 
 [System.Serializable]
