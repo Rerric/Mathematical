@@ -42,7 +42,7 @@ public class MovePieces : MonoBehaviour
                 }
                 else if (aDir.y > aDir.x)
                 {
-                    add = (new Point((nDir.y > 0) ? 1 : -1, 0));
+                    add = (new Point(0, (nDir.y > 0) ? -1 : 1));
                 }
             }
             newIndex.add(add);
@@ -50,7 +50,7 @@ public class MovePieces : MonoBehaviour
             Vector2 pos = game.getPositionFromPoint(moving.index);
             if (!newIndex.Equals(moving.index))
             {
-                pos += Point.mult(add, (1/2)).ToVector();
+                pos += Point.mult(new Point(add.x, -add.y), (1/2)).ToVector();
             }
             moving.MovePositionTo(pos);
         }
@@ -67,8 +67,11 @@ public class MovePieces : MonoBehaviour
     {
         if (moving == null) return;
         Debug.Log("Dropped");
-
-        game.ResetPiece(moving);
+        if (!newIndex.Equals(moving.index))
+        {
+            game.flipPieces(moving.index, newIndex, true);
+        }
+        else game.ResetPiece(moving);
         moving = null;
     }
 }

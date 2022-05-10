@@ -21,7 +21,7 @@ public class NodePiece : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         img = GetComponent<Image>();
         rect = GetComponent<RectTransform>();
-
+        
         value = v;
         SetIndex(p);
         img.sprite = piece;
