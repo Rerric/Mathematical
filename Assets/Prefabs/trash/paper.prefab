@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2786732193785381599}
   - component: {fileID: 2482299457211692262}
   - component: {fileID: 5435620160173043360}
+  - component: {fileID: -1805374990714616744}
   m_Layer: 0
   m_Name: paper
   m_TagString: trash
@@ -63,6 +64,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1805374990714616744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3307795549071693925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b65b27276cb00e4f962f6d3a40921fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragging: 0
+  distance: 0
+  startDist: {x: 0, y: 0, z: 0}
 --- !u!1 &7077702254704938270
 GameObject:
   m_ObjectHideFlags: 0

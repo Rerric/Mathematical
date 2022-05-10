@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 2694767917774004735}
   - component: {fileID: 1142422781299507188}
   - component: {fileID: 6811384767249823216}
+  - component: {fileID: 7673471738625415556}
   m_Layer: 0
   m_Name: chipc
   m_TagString: trash
@@ -143,3 +144,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7673471738625415556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3327717606927481669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b65b27276cb00e4f962f6d3a40921fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragging: 0
+  distance: 0
+  startDist: {x: 0, y: 0, z: 0}

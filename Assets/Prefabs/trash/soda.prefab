@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6585680552928926498}
   - component: {fileID: 5173015660374895876}
   - component: {fileID: -1909530148788417676}
+  - component: {fileID: -4754824664949117163}
   m_Layer: 0
   m_Name: soda
   m_TagString: trash
@@ -62,6 +63,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4754824664949117163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5777794234743947672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b65b27276cb00e4f962f6d3a40921fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragging: 0
+  distance: 0
+  startDist: {x: 0, y: 0, z: 0}
 --- !u!1 &7825327173196924331
 GameObject:
   m_ObjectHideFlags: 0
