@@ -11,6 +11,7 @@ public class NodePiece : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     [HideInInspector]
     public Vector2 pos;
+    public NodePiece flipped;
     [HideInInspector]
     public RectTransform rect;
 
@@ -19,6 +20,7 @@ public class NodePiece : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void Initialize(int v, Point p, Sprite piece)
     {
+        flipped = null;
         img = GetComponent<Image>();
         rect = GetComponent<RectTransform>();
         

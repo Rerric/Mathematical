@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Match3: MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class Match3: MonoBehaviour
 
     void Update()
     {
+
         List<NodePiece> finishedUpdating = new List<NodePiece>();
         for (int i = 0; i < update.Count; i++)
         {
@@ -43,14 +45,17 @@ public class Match3: MonoBehaviour
         {
             NodePiece piece = finishedUpdating[i];
             FlippedPieces flip = getFlipped(piece);
+            NodePiece flippedPiece = null;
 
-            NodePiece flippedPiece = flip.getOtherPiece(piece);
             List<Point> connected = isConnected(piece.index, true);
-            bool wasFlipped = (flippedPiece != null);
-            if (flippedPiece != null)
+            bool wasFlipped = (flip != null);
+
+            if (wasFlipped)
             {
+                flippedPiece = flip.getOtherPiece(piece);
                 AddPoints(ref connected, isConnected(flippedPiece.index, true));
             }
+
             if (connected.Count == 0)
             {
                 if (wasFlipped)
